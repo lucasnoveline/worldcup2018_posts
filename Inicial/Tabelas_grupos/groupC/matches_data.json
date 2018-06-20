@@ -1,0 +1,8 @@
+[
+{"flagA": "france", "teamA": "França", "Awins": 0.76927, "draw": 0.15654, "Bwins": 0.07419, "teamB": "Austrália","flagB": "australia"},
+{"flagA": "peru", "teamA": "Peru", "Awins": 0.47549, "draw": 0.27374, "Bwins": 0.25077, "teamB": "Dinamarca","flagB": "denmark"},
+{"flagA": "denmark", "teamA": "Dinamarca", "Awins": 0.50055, "draw": 0.27812, "Bwins": 0.22133, "teamB": "Austrália","flagB": "australia"},
+{"flagA": "france", "teamA": "França", "Awins": 0.606, "draw": 0.22624, "Bwins": 0.16776, "teamB": "Peru","flagB": "peru"},
+{"flagA": "denmark", "teamA": "Dinamarca", "Awins": 0.09612, "draw": 0.16154, "Bwins": 0.74234, "teamB": "França","flagB": "france"},
+{"flagA": "australia", "teamA": "Austrália", "Awins": 0.15742, "draw": 0.24697, "Bwins": 0.59561, "teamB": "Peru","flagB": "peru"}
+]

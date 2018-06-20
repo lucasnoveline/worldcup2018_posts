@@ -1,0 +1,8 @@
+[
+{"flagA": "morocco", "teamA": "Marrocos", "Awins": 0.24306, "draw": 0.27562, "Bwins": 0.48132, "teamB": "Irã","flagB": "iran"},
+{"flagA": "portugal", "teamA": "Portugal", "Awins": 0.22288, "draw": 0.25317, "Bwins": 0.52395, "teamB": "Espanha","flagB": "spain"},
+{"flagA": "portugal", "teamA": "Portugal", "Awins": 0.7538, "draw": 0.16882, "Bwins": 0.07738, "teamB": "Marrocos","flagB": "morocco"},
+{"flagA": "iran", "teamA": "Irã", "Awins": 0.08203, "draw": 0.16364, "Bwins": 0.75433, "teamB": "Espanha","flagB": "spain"},
+{"flagA": "iran", "teamA": "Irã", "Awins": 0.13516, "draw": 0.22963, "Bwins": 0.63521, "teamB": "Portugal","flagB": "portugal"},
+{"flagA": "spain", "teamA": "Espanha", "Awins": 0.80763, "draw": 0.12308, "Bwins": 0.06929, "teamB": "Marrocos","flagB": "morocco"}
+]

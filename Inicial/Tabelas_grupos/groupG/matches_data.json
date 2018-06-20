@@ -1,0 +1,8 @@
+[
+{"flagA": "belgium", "teamA": "Bélgica", "Awins": 0.77622, "draw": 0.14734, "Bwins": 0.07644, "teamB": "Panamá","flagB": "panama"},
+{"flagA": "tunisia", "teamA": "Tunísia", "Awins": 0.07574, "draw": 0.1504, "Bwins": 0.77386, "teamB": "Inglaterra","flagB": "england"},
+{"flagA": "belgium", "teamA": "Bélgica", "Awins": 0.78316, "draw": 0.1452, "Bwins": 0.07164, "teamB": "Tunísia","flagB": "tunisia"},
+{"flagA": "england", "teamA": "Inglaterra", "Awins": 0.78668, "draw": 0.14209, "Bwins": 0.07123, "teamB": "Panamá","flagB": "panama"},
+{"flagA": "england", "teamA": "Inglaterra", "Awins": 0.42095, "draw": 0.25488, "Bwins": 0.32417, "teamB": "Bélgica","flagB": "belgium"},
+{"flagA": "panama", "teamA": "Panamá", "Awins": 0.42476, "draw": 0.29669, "Bwins": 0.27855, "teamB": "Tunísia","flagB": "tunisia"}
+]

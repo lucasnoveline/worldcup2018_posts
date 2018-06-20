@@ -1,0 +1,8 @@
+[
+	{"flagA": "russia", "teamA": "Rússia", "Awins": 0.60867, "draw": 0.22664, "Bwins": 0.16469, "teamB": "Arábia Saudita","flagB": "saudi-arabia"},
+	{"flagA": "egypt", "teamA": "Egito", "Awins": 0.0912, "draw": 0.18126, "Bwins": 0.72754, "teamB": "Uruguai","flagB": "uruguay"},
+	{"flagA": "russia", "teamA": "Rússia", "Awins": 0.52401, "draw": 0.25614, "Bwins": 0.21985, "teamB": "Egito","flagB": "egypt"},
+	{"flagA": "uruguay", "teamA": "Uruguai", "Awins": 0.72384, "draw": 0.18634, "Bwins": 0.08982, "teamB": "Arábia Saudita","flagB": "saudi-arabia"},
+	{"flagA": "saudi-arabia", "teamA": "Arábia Saudita", "Awins": 0.29703, "draw": 0.28193, "Bwins": 0.42104, "teamB": "Egito","flagB": "egypt"},
+	{"flagA": "uruguay", "teamA": "Uruguai", "Awins": 0.61353, "draw": 0.21692, "Bwins": 0.16955, "teamB": "Rússia","flagB": "russia"}
+]

@@ -1,0 +1,8 @@
+[
+	{"flagA": "costa-rica", "teamA": "Costa Rica", "Awins": 0.44685, "draw": 0.2862, "Bwins": 0.26695, "teamB": "Sérvia", "flagB": "serbia"},
+	{"flagA": "brazil", "teamA": "Brasil", "Awins": 0.7224, "draw": 0.18384, "Bwins": 0.09376, "teamB": "Suíça", "flagB": "switzerland"},
+	{"flagA": "brazil", "teamA": "Brasil", "Awins": 0.80782, "draw": 0.13113, "Bwins": 0.06105, "teamB": "Costa Rica", "flagB": "costa-rica"},
+	{"flagA": "serbia", "teamA": "Sérvia", "Awins": 0.21747, "draw": 0.27812, "Bwins": 0.50441, "teamB": "Suíça", "flagB": "switzerland"},
+	{"flagA": "serbia", "teamA": "Sérvia", "Awins": 0.0647, "draw": 0.14358, "Bwins": 0.79172, "teamB": "Brasil", "flagB": "brazil"},
+	{"flagA": "switzerland", "teamA": "Suíça", "Awins": 0.56853, "draw": 0.24937, "Bwins": 0.1821, "teamB": "Costa Rica", "flagB": "costa-rica"}
+	]

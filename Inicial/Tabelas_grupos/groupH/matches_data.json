@@ -1,0 +1,8 @@
+[
+{"flagA": "colombia", "teamA": "Colômbia", "Awins": 0.6097, "draw": 0.22645, "Bwins": 0.16385, "teamB": "Japão","flagB": "japan"},
+{"flagA": "republic-of-poland", "teamA": "Polônia", "Awins": 0.62703, "draw": 0.22163, "Bwins": 0.15134, "teamB": "Senegal","flagB": "senegal"},
+{"flagA": "japan", "teamA": "Japão", "Awins": 0.44684, "draw": 0.25313, "Bwins": 0.30003, "teamB": "Senegal","flagB": "senegal"},
+{"flagA": "republic-of-poland", "teamA": "Polônia", "Awins": 0.25693, "draw": 0.25733, "Bwins": 0.48574, "teamB": "Colômbia","flagB": "colombia"},
+{"flagA": "japan", "teamA": "Japão", "Awins": 0.18847, "draw": 0.20965, "Bwins": 0.60188, "teamB": "Polônia","flagB": "republic-of-poland"},
+{"flagA": "senegal", "teamA": "Senegal", "Awins": 0.12211, "draw": 0.23265, "Bwins": 0.64524, "teamB": "Colômbia","flagB": "colombia"}
+]

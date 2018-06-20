@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World cup 2018: Group Stage Table</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src='jetpack-starter-kit.js'></script>
+    <style type="text/css">
+        
+        body { font-family: 'Helvetica Neue', Helvetica; font-weight: 300; }
+    	
+        table {
+        	border-collapse: collapse;
+        	width: auto;
+        }
+        
+        /* Espacamento entre linhas e colunas */
+        th,td { padding: 5px; font-size: 12px; }
+        
+        /* Bordas em baixo no header e nas celulas */
+        th { border-bottom: 3px solid black; }
+		td { border-bottom: 1px solid #ddd; }
+        
+        table th:nth-child(1){
+            width: 80px;
+        }
+        table th:nth-child(2){
+           width: 30px;
+        }
+        table th:nth-child(3){
+        width: 40px;
+        }
+        table th:nth-child(4){
+            width: 40px;
+        }
+        table th:nth-child(5){
+            width: 40px;
+        }
+        table th:nth-child(6){
+            width: 30px;
+        }
+        table th:nth-child(7){
+            width: 80px;
+        }
+        table td:nth-child(1){
+            text-align: right;
+        }
+        table td:nth-child(7){
+            text-align: left;
+        }
+
+        th.header { text-align: center; }    
+        
+        tr:hover {background-color: #f5f5f5;}
+  
+        th {
+            background-color: #ffffff;	    
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }       
+        
+        td.img { text-align: center; } /* Imagens */
+        td.namel { text-align: left; } /* Nomes */
+        td.namer { text-align: right; } /* Nomes */
+        td.num { text-align: center; } /* Nomes */
+
+    </style>
+</head>
+<body>
+    <script>
+        // Carregando nome do arquivo atraves do iframe
+        var file_path = window.location.search.substring(window.location.search.indexOf('file_path=') + 10);
+        
+        // Carregando os dados
+        d3.json(file_path, function(data)
+        {
+            var f = d3.f; // Definindo funcao de simplificacao
+            // column definitions OK!
+            var headers = [
+                { titulo: '', class: 'header', id: 'teamA', cspan: 1, width: 40 },
+                { titulo: '', class: 'header', id: 'flagA', cspan: 0, width: 30 },
+                { titulo: 'V', class: 'header', id: 'Awins', cspan: 1, width: 30 },
+                { titulo: 'E', class: 'header', id: 'draw', cspan: 1, width: 30 },
+                { titulo: 'V', class: 'header', id: 'Bwins', cspan: 1, width: 30 },
+                { titulo: '', class: 'header', id: 'flagB', cspan: 1, width: 30 },
+                { titulo: '', class: 'header', id: 'teamB', cspan: 1, width: 40 }
+            ];
+            var data_keys = [
+                { key: 'teamA', class: 'namer', html: f('teamA') },
+                { key: 'flagA', class: 'img', html: f('flagA', input_img()) },
+                { key: 'Awins', class: 'num', html: f('Awins', percent()) },
+                { key: 'draw', class: 'num', html: ƒ('draw', percent())},
+                { key: 'Bwins', class: 'num', html: ƒ('Bwins', percent())},
+                { key: 'flagB', class: 'img', html: f('flagB', input_img()) },
+                { key: 'teamB', class: 'namel', html: f('teamB') },
+            ];
+            // Criando tabela
+            var table = d3.select('body')
+                .append('table');
+        
+            // Criando cabecalho        
+            var theaders = table.append('thead').append('tr')
+                .selectAll('th')
+                .data(headers).enter()
+                .append('th')
+                .attr('class', ƒ('class'))
+                .attr('id', f('id'))
+                .attr('colspan', f('cspan'))
+                .attr('width', f('width'))
+                .text(ƒ('titulo'))        
+        
+
+            // Corpo da tabela
+            var rows = table.append('tbody').selectAll('tr')
+                        .data(data).enter()
+                        .append('tr');
+        
+                    rows.selectAll('td')
+            .data(function(row, i) {
+                return data_keys.map(function(c) {
+                    // compute cell values for this specific row
+                    var cell = {};
+                    d3.keys(c).forEach(function(k) {
+                        cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
+                    });
+                    return cell;
+                });
+            }).enter()
+            .append('td')
+            .html(ƒ('html'))
+
+            .attr('class', ƒ('class'));
+			// Funcoes de processamento dos dados
+			// Retorna numero em porcentagem sem casas decimais
+			function percent() {
+            	return function(f) { return Math.round(100 * f) + '%'; };
+        	};
+        	// A partir do nome do pais, retorna a bandeira
+        	function input_img() {
+        		return function(country) { return "<img src='https://raw.githubusercontent.com/lucasnoveline/worldcup2018/master/flags32/" + country +".png' width='24' height='24'>"; }
+        	};
+		});
+	</script>
+</body>
+<html/>
