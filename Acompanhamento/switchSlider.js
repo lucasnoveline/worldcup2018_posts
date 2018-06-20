@@ -33,14 +33,14 @@ function switchSlider () {
 		output.innerHTML = show;
 		
 		// Modificando tabela de grupos
-		var swt = document.getElementByClassName("switch");
+		var swt = document.getElementsByClassName("switch");
 		var frame = "<iframe width='600' height='1200' frameborder='0' scrolling='yes' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/?data=" + data + "' align='middle'></iframe>";
 
-		swt.innerHTML = frame;
+		swt[0].innerHTML = frame;
 	}
 	// Modificando tabela de grupos
-	var swt = document.getElementByClassName("switch");
+	var swt = document.getElementsByClassName("switch");
 	var frame = "<iframe width='600' height='1200' frameborder='0' scrolling='yes' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/?data=" + data + "' align='middle'></iframe>";
 
-	swt.innerHTML = frame;
+	swt[0].innerHTML = frame;
 }
