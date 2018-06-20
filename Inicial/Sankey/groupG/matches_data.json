@@ -1,0 +1,29 @@
+{
+"links": [
+{"source": "Bélgica", "target": "1º", "value": 0.46044},
+{"source": "Bélgica", "target": "2º", "value": 0.42722},
+{"source": "Bélgica", "target": "3º", "value": 0.09064},
+{"source": "Bélgica", "target": "4º", "value": 0.0217},
+{"source": "Inglaterra", "target": "1º", "value": 0.50204},
+{"source": "Inglaterra", "target": "2º", "value": 0.40085},
+{"source": "Inglaterra", "target": "3º", "value": 0.07846},
+{"source": "Inglaterra", "target": "4º", "value": 0.01865},
+{"source": "Panamá", "target": "1º", "value": 0.02215},
+{"source": "Panamá", "target": "2º", "value": 0.09772},
+{"source": "Panamá", "target": "3º", "value": 0.47505},
+{"source": "Panamá", "target": "4º", "value": 0.40508},
+{"source": "Tunísia", "target": "1º", "value": 0.01537},
+{"source": "Tunísia", "target": "2º", "value": 0.07421},
+{"source": "Tunísia", "target": "3º", "value": 0.35585},
+{"source": "Tunísia", "target": "4º", "value": 0.55457}
+],
+"nodes": [
+{"name": "Bélgica", "namea": "Bélgica", "nameb": "", "namec": "", "color": "#FAE042", "flag": "belgium"},
+{"name": "Inglaterra", "namea": "Inglaterra", "nameb": "", "namec": "", "color": "#CF142B", "flag": "england"},
+{"name": "Panamá", "namea": "Panamá", "nameb": "", "namec": "", "color": "#005293", "flag": "panama"},
+{"name": "Tunísia", "namea": "Tunísia", "nameb": "", "namec": "", "color": "#E70013", "flag": "tunisia"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": ""},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": ""},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""}
+] }

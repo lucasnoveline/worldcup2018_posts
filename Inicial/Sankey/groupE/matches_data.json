@@ -1,0 +1,29 @@
+{
+"links": [
+{"source":"Brasil","target":"1º","value":0.872525252525252},
+{"source":"Brasil","target":"2º","value":0.108686868686869},
+{"source":"Brasil","target":"3º","value":0.0187878787878788},
+{"source":"Brasil","target":"4º","value":0},
+{"source":"Costa Rica","target":"1º","value":0.0355555555555556},
+{"source":"Costa Rica","target":"2º","value":0.237979797979798},
+{"source":"Costa Rica","target":"3º","value":0.324848484848485},
+{"source":"Costa Rica","target":"4º","value":0.401616161616162},
+{"source":"Sérvia","target":"1º","value":0.0385858585858586},
+{"source":"Sérvia","target":"2º","value":0.291717171717172},
+{"source":"Sérvia","target":"3º","value":0.301010101010101},
+{"source":"Sérvia","target":"4º","value":0.368686868686869},
+{"source":"Suíça","target":"1º","value":0.0533333333333333},
+{"source":"Suíça","target":"2º","value":0.361616161616162},
+{"source":"Suíça","target":"3º","value":0.355353535353535},
+{"source":"Suíça","target":"4º","value":0.22969696969697}
+],
+"nodes": [
+{"name":"Brasil","namea": "Brasil", "nameb": "", "namec": "", "color":"#009b3a", "flag": "brazil"},
+{"name":"Suíça","namea": "Suíça", "nameb": "", "namec": "", "color":"#e30a17", "flag": "switzerland"},
+{"name":"Sérvia","namea": "Sérvia", "nameb": "", "namec": "", "color":"#edb92e", "flag": "serbia"},
+{"name":"Costa Rica","namea": "", "nameb": "Costa", "namec": "Rica", "color":"#002b7f", "flag": "costa-rica"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": ""},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": ""},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""}
+] }

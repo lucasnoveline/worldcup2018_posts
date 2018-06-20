@@ -1,0 +1,29 @@
+{
+"links": [
+{"source": "Alemanha", "target": "1º", "value": 0.70165},
+{"source": "Alemanha", "target": "2º", "value": 0.20243},
+{"source": "Alemanha", "target": "3º", "value": 0.07198},
+{"source": "Alemanha", "target": "4º", "value": 0.02394},
+{"source": "México", "target": "1º", "value": 0.142},
+{"source": "México", "target": "2º", "value": 0.35452},
+{"source": "México", "target": "3º", "value": 0.3015},
+{"source": "México", "target": "4º", "value": 0.20198},
+{"source": "Coreia do Sul", "target": "1º", "value": 0.04574},
+{"source": "Coreia do Sul", "target": "2º", "value": 0.16386},
+{"source": "Coreia do Sul", "target": "3º", "value": 0.29309},
+{"source": "Coreia do Sul", "target": "4º", "value": 0.49731},
+{"source": "Suécia", "target": "1º", "value": 0.11061},
+{"source": "Suécia", "target": "2º", "value": 0.27919},
+{"source": "Suécia", "target": "3º", "value": 0.33343},
+{"source": "Suécia", "target": "4º", "value": 0.27677}
+],
+"nodes": [
+{"name": "Alemanha", "namea": "Alemanha", "nameb": "", "namec": "", "color": "#DD0000", "flag": "germany"},
+{"name": "México", "namea": "México", "nameb": "", "namec": "", "color": "#006847", "flag": "mexico"},
+{"name": "Coreia do Sul", "namea": "", "nameb": "Coreia", "namec": "do Sul", "color": "#024FA2", "flag": "south-korea"},
+{"name": "Suécia", "namea": "Suécia", "nameb": "", "namec": "", "color": "#FECD01", "flag": "sweden"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": ""},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": ""},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""}
+] }

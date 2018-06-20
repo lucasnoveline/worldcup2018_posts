@@ -1,0 +1,29 @@
+{
+"links": [
+{"source": "Colômbia", "target": "1º", "value": 0.52682},
+{"source": "Colômbia", "target": "2º", "value": 0.29516},
+{"source": "Colômbia", "target": "3º", "value": 0.12844},
+{"source": "Colômbia", "target": "4º", "value": 0.04958},
+{"source": "Japão", "target": "1º", "value": 0.0922},
+{"source": "Japão", "target": "2º", "value": 0.20126},
+{"source": "Japão", "target": "3º", "value": 0.35798},
+{"source": "Japão", "target": "4º", "value": 0.34856},
+{"source": "Polônia", "target": "1º", "value": 0.32975},
+{"source": "Polônia", "target": "2º", "value": 0.36972},
+{"source": "Polônia", "target": "3º", "value": 0.20706},
+{"source": "Polônia", "target": "4º", "value": 0.09347},
+{"source": "Senegal", "target": "1º", "value": 0.05123},
+{"source": "Senegal", "target": "2º", "value": 0.13386},
+{"source": "Senegal", "target": "3º", "value": 0.30652},
+{"source": "Senegal", "target": "4º", "value": 0.50839}
+],
+"nodes": [
+{"name": "Colômbia", "namea": "Colômbia", "nameb": "", "namec": "", "color": "#FCD116", "flag": "colombia"},
+{"name": "Japão", "namea": "Japão", "nameb": "", "namec": "", "color": "#BC002D", "flag": "japan"},
+{"name": "Polônia", "namea": "Polônia", "nameb": "", "namec": "", "color": "#DC143C", "flag": "republic-of-poland"},
+{"name": "Senegal", "namea": "Senegal", "nameb": "", "namec": "", "color": "#00853F", "flag": "senegal"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": ""},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": ""},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""}
+] }

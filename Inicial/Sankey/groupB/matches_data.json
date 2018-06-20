@@ -1,0 +1,29 @@
+{
+"links": [
+{"source": "Irã", "target": "1º", "value": 0.04706},
+{"source": "Irã", "target": "2º", "value": 0.16966},
+{"source": "Irã", "target": "3º", "value": 0.46947},
+{"source": "Irã", "target": "4º", "value": 0.31381},
+{"source": "Marrocos", "target": "1º", "value": 0.01882},
+{"source": "Marrocos", "target": "2º", "value": 0.07974},
+{"source": "Marrocos", "target": "3º", "value": 0.28451},
+{"source": "Marrocos", "target": "4º", "value": 0.61693},
+{"source": "Portugal", "target": "1º", "value": 0.3104},
+{"source": "Portugal", "target": "2º", "value": 0.46919},
+{"source": "Portugal", "target": "3º", "value": 0.16986},
+{"source": "Portugal", "target": "4º", "value": 0.05055},
+{"source": "Espanha", "target": "1º", "value": 0.62372},
+{"source": "Espanha", "target": "2º", "value": 0.28141},
+{"source": "Espanha", "target": "3º", "value": 0.07616},
+{"source": "Espanha", "target": "4º", "value": 0.01871}
+],
+"nodes": [
+{"name": "Irã", "namea": "Irã", "nameb": "", "namec": "", "color": "#239F40", "flag": "iran"},
+{"name": "Marrocos", "namea": "Marrocos", "nameb": "", "namec": "", "color": "#006233", "flag": "morocco"},
+{"name": "Portugal", "namea": "Portugal", "nameb": "", "namec": "", "color": "#DB161B", "flag": "portugal"},
+{"name": "Espanha", "namea": "Espanha", "nameb": "", "namec": "", "color": "#FFC400", "flag": "spain"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": "bla"},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": "bla"},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": "bla"},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": "bla"}
+] }

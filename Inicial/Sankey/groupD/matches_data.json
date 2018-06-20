@@ -1,0 +1,29 @@
+{
+"links": [
+{"source": "Argentina", "target": "1º", "value": 0.71668},
+{"source": "Argentina", "target": "2º", "value": 0.19725},
+{"source": "Argentina", "target": "3º", "value": 0.06887},
+{"source": "Argentina", "target": "4º", "value": 0.0172},
+{"source": "Croácia", "target": "1º", "value": 0.14896},
+{"source": "Croácia", "target": "2º", "value": 0.39984},
+{"source": "Croácia", "target": "3º", "value": 0.32389},
+{"source": "Croácia", "target": "4º", "value": 0.12731},
+{"source": "Islândia", "target": "1º", "value": 0.11621},
+{"source": "Islândia", "target": "2º", "value": 0.32363},
+{"source": "Islândia", "target": "3º", "value": 0.38653},
+{"source": "Islândia", "target": "4º", "value": 0.17363},
+{"source": "Nigéria", "target": "1º", "value": 0.01815},
+{"source": "Nigéria", "target": "2º", "value": 0.07928},
+{"source": "Nigéria", "target": "3º", "value": 0.22071},
+{"source": "Nigéria", "target": "4º", "value": 0.68186}
+],
+"nodes": [
+{"name": "Argentina", "namea": "Argentina", "nameb": "", "namec": "", "color": "#74ACDF", "flag": "argentina"},
+{"name": "Croácia", "namea": "Croácia", "nameb": "", "namec": "", "color": "#FF0000", "flag": "croatia"},
+{"name": "Islândia", "namea": "Islândia", "nameb": "", "namec": "", "color": "#02529C", "flag": "iceland"},
+{"name": "Nigéria", "namea": "Nigéria", "nameb": "", "namec": "", "color": "#008751", "flag": "nigeria"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": ""},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": ""},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""}
+] }

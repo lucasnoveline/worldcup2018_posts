@@ -1,0 +1,30 @@
+{
+"links": [
+{"source": "Egito", "target": "1º", "value": 0.0709},
+{"source": "Egito", "target": "2º", "value": 0.21998},
+{"source": "Egito", "target": "3º", "value": 0.36855},
+{"source": "Egito", "target": "4º", "value": 0.34057},
+{"source": "Rússia", "target": "1º", "value": 0.2165},
+{"source": "Rússia", "target": "2º", "value": 0.41232},
+{"source": "Rússia", "target": "3º", "value": 0.24691},
+{"source": "Rússia", "target": "4º", "value": 0.12427},
+{"source": "Arábia Saudita", "target": "1º", "value": 0.04396},
+{"source": "Arábia Saudita", "target": "2º", "value": 0.14155},
+{"source": "Arábia Saudita", "target": "3º", "value": 0.30468},
+{"source": "Arábia Saudita", "target": "4º", "value": 0.50981},
+{"source": "Uruguai", "target": "1º", "value": 0.66864},
+{"source": "Uruguai", "target": "2º", "value": 0.22615},
+{"source": "Uruguai", "target": "3º", "value": 0.07986},
+{"source": "Uruguai", "target": "4º", "value": 0.02535}
+],
+"nodes": [
+{"name": "Egito", "namea": "Egito", "nameb": "", "namec": "", "color": "#C09300", "flag": "egypt"},
+{"name": "Rússia", "namea": "Rússia", "nameb": "", "namec": "", "color": "#0039A6", "flag": "russia"},
+{"name": "Arábia Saudita", "": "1º", "nameb": "Arábia", "namec": "Saudita", "color": "#006C35", "flag": "saudi-arabia"},
+{"name": "Uruguai", "namea": "Uruguai", "nameb": "", "namec": "", "color": "#0038A8", "flag": "uruguay"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": "bla"},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": "bla"},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": "bla"},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": "bla"}
+]
+}

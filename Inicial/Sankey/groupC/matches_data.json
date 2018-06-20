@@ -1,0 +1,29 @@
+{
+"links": [
+{"source": "Austrália", "target": "1º", "value": 0.03266},
+{"source": "Austrália", "target": "2º", "value": 0.13157},
+{"source": "Austrália", "target": "3º", "value": 0.28449},
+{"source": "Austrália", "target": "4º", "value": 0.55128},
+{"source": "Dinamarca", "target": "1º", "value": 0.08192},
+{"source": "Dinamarca", "target": "2º", "value": 0.25781},
+{"source": "Dinamarca", "target": "3º", "value": 0.3722},
+{"source": "Dinamarca", "target": "4º", "value": 0.28807},
+{"source": "França", "target": "1º", "value": 0.71194},
+{"source": "França", "target": "2º", "value": 0.2009},
+{"source": "França", "target": "3º", "value": 0.0674},
+{"source": "França", "target": "4º", "value": 0.01976},
+{"source": "Peru", "target": "1º", "value": 0.17348},
+{"source": "Peru", "target": "2º", "value": 0.40972},
+{"source": "Peru", "target": "3º", "value": 0.27591},
+{"source": "Peru", "target": "4º", "value": 0.14089}
+],
+"nodes": [
+{"name": "Austrália", "namea": "Austrália", "nameb": "", "namec": "", "color": "#012169", "flag": "australia"},
+{"name": "Dinamarca", "namea": "Dinamarca", "nameb": "", "namec": "", "color": "#C60C30", "flag": "denmark"},
+{"name": "França", "namea": "França", "nameb": "", "namec": "", "color": "#002395", "flag": "france"},
+{"name": "Peru", "namea": "Peru", "nameb": "", "namec": "", "color": "#D91023", "flag": "peru"},
+{"name":"1º","namea": "1º", "nameb": "", "namec": "", "color":"#2E8B57", "flag": ""},
+{"name":"2º","namea": "2º", "nameb": "", "namec": "", "color":"#3CB371", "flag": ""},
+{"name":"3º","namea": "3º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""},
+{"name":"4º","namea": "4º", "nameb": "", "namec": "", "color":"#bbb0ac", "flag": ""}
+] }
