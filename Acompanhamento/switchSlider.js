@@ -17,11 +17,6 @@ function switchSlider () {
 	}
 	output.innerHTML = show;
 
-	// Modificando tabela de grupos
-	var switch = document.getElementByClassName("switch");
-	var frame = "<iframe width='600' height='1200' frameborder='0' scrolling='yes' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/?data=" + data + "' align='middle'></iframe>";
-	switch.innerHTML = frame;
-
 	// Caso de click no Slider
 	slider.oninput = function() {
 		var val = this.value;
@@ -36,9 +31,16 @@ function switchSlider () {
 			var show = dia + ' de Julho';
 		}
 		output.innerHTML = show;
+		
 		// Modificando tabela de grupos
-		var switch = document.getElementByClassName("switch");
-		var frame = "<iframe width='600' height='1200' frameborder='0' scrolling='yes' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/?data=" + data + "' align='middle'></iframe>";
-		switch.innerHTML = frame;
-	};
+		var swt = document.getElementByClassName("switch");
+		var frame = "<iframe width='300' height='200' frameborder='0' scrolling='no' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/?data=" + data + "' align='middle'></iframe>";
+
+		swt.innerHTML = frame;
+	}
+	// Modificando tabela de grupos
+	var swt = document.getElementByClassName("switch");
+	var frame = "<iframe width='300' height='200' frameborder='0' scrolling='no' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/?data=" + data + "' align='middle'></iframe>";
+
+	swt.innerHTML = frame;
 }
