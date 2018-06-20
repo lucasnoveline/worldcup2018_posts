@@ -1,0 +1,53 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*#main {
+  float: left;
+  width: 100%;
+}
+
+#sidebar {
+  float: right;
+  width: 100px;
+}
+
+}*/
+
+#chart {
+  padding: 30px;
+  position: relative;
+  margin: auto;
+}
+
+#chart path {
+  stroke: #fff;
+}
+
+#explanation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2vw;
+  text-align: center;
+  color: #666;
+  z-index: -1;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+
+#country {
+  font-size: 2em;
+}
+
+#sequence {
+  width: 100%;
+}
+
+#sequence text {
+  font-weight: 600;
+  fill: #fff;
+}
