@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acompanhamento fase de grupos</title>
+
+	<meta charset="utf-8"> <!-- Habilita UTF-8 -->
+    
+    <!-- Carregando bibliotecas Javascript -->
+    <script src="https://d3js.org/d3.v3.min.js"></script> 
+    <script src='jetpack-starter-kit.js'></script>
+    
+    <!-- Codigo CSS - Definicoes de aparencia -->
+    <style type="text/css">
+    	/* Corpo da pagina: Definicoes de fonte e borda*/
+    	body { font-family: 'Helvetica Neue', Helvetica; font-weight: 300; }
+    	/* Tabela: Sem bordas automaticas, largura automatica*/
+    	table {
+        	border-collapse: collapse;
+        	width: auto;
+        }
+        /* Espacamento entre linhas e colunas */
+        th,td { padding: 5px; font-size: 12px; }
+        /* Bordas em baixo no header e nas celulas */
+        th { border-bottom: 3px solid black; cursor: pointer; }
+		td { border-bottom: 1px solid #ddd; }
+		table th:nth-child(4){
+	       border-right: 3px solid black;
+	     }
+		table td:nth-child(5){
+	       border-right: 3px solid black;
+	     }
+	    table th:nth-child(2){
+	       border-right: 3px solid black;
+	     }
+		table td:nth-child(3){
+	       border-right: 3px solid black;
+	     }
+        /* Table header (class header): Alinhado no centro */
+        th.header { text-align: center; }
+        /* Table data */
+        td.img { text-align: center; } /* Imagens */
+        td.name { text-align: left; } /* Nomes */
+        td.num { text-align: center; } /* Nomes */
+        /* Adicionando as setas de sort */
+        th.des:after {
+	      content: "\21E9";
+	    }
+	    
+	    th.aes:after {
+	      content: "\21E7";
+	    }
+    </style>
+</head>
+<body>
+	<!-- Codigo Javascript - Criacao de elementos e interatividade -->
+	<script type="text/javascript">
+		// Definicao do operador 'f' (pertence a lib 'jetpack-starter-kit.js')
+		// f() == function(d) { return d; }
+		// f('object') == function(d) { return d.object; }
+		// f('object1', i, 'object2') == function(d) { return d.object1[i].object2; }
+		// f('object', function()) == function(d) { return d.object.function() }
+		var f = d3.f;
+		// Definindo gradiente de cores: Porcentagem -> Cor
+		var good = d3.scale.linear()
+                            .domain([0,100])
+                            .range(['white','#55AE3A']);
+        var bad = d3.scale.linear()
+                            .domain([0,100])
+                            .range(['white','#FF3030']);
+        var color_control = {First: good, Second: good, Third: bad, Fourth: bad};
+        // Direcao de ordenacao
+      	var sortAscending = true;
+      	// Carregando nome do arquivo atraves do iframe
+      	var file_path = window.location.search.substring(window.location.search.indexOf('file_path=') + 10);
+      	
+		// Carregando os dados
+		d3.json(file_path, function(data) {
+			// Definicao dos headers
+			// titulo, class (definicoes de estilo), cspan (quantidade de celulas ocupadas)
+			var headers = [
+			{ titulo: 'Seleção', class: 'header', id: 'Team', cspan: 2, width: 40 },
+			{ titulo: 'Pts', class: 'header', id: 'Points', cspan: 1, width: 30 },
+			{ titulo: '1°', class: 'header', id: 'First', cspan: 1, width: 30 },
+			{ titulo: '2°', class: 'header', id: 'Second', cspan: 1, width: 30 },
+			{ titulo: '3°', class: 'header', id: 'Third', cspan: 1, width: 30 },
+			{ titulo: '4°', class: 'header', id: 'Fourth', cspan: 1, width: 30 }
+			];
+			// Chaves para processamento dos dados
+			// key (chave de extracao do conteudo), class (definicoes de estilo),
+			// html (funcao de conversao da entrada recebida para o conteudo html na pagina) 
+			var data_keys = [
+				{ key: 'Flag', class: 'img', html: f('Flag', input_img()) },
+				{ key: 'Team', class: 'name', html: f('Team') },
+				{ key: 'Points', class: 'num', html: f('Points') },
+				{ key: 'First', class: 'num', html: f('First', percent()) },
+				{ key: 'Second', class: 'num', html: f('Second', percent()) },
+				{ key: 'Third', class: 'num', html: f('Third', percent()) },
+				{ key: 'Fourth', class: 'num', html: f('Fourth', percent()) }
+			];
+			// Construindo a tabela
+			// Criando tabela
+            var table = d3.select('body')
+                .append('table');
+           
+            // Criando cabecalho
+            var theaders = table.append('thead').append('tr')
+                .selectAll('th')
+                .data(headers).enter()
+                .append('th')
+                .attr('class', ƒ('class'))
+                .attr('id', f('id'))
+                .attr('colspan', f('cspan'))
+                .attr('width', f('width'))
+                .text(ƒ('titulo'))
+                .on('click', function (d) {
+                                    var k = this.id;
+                                    sortable = ['Team','Points','First','Second', 'Third', 'Fourth'];
+                                    if (sortable.includes(k)) {
+                                        theaders.attr('class', f('class'));
+                                        if (k == 'Team') {
+                                            if (sortAscending) {
+                                              rows.sort(function(a, b) { return b[k] < a[k]? 1 : -1; });
+                                              sortAscending = false;
+                                              this.className = 'aes';
+                                            } else {
+                                              rows.sort(function(a, b) { return b[k] > a[k]? 1 : -1; });
+                                              sortAscending = true;
+                                              this.className = 'des';
+                                            }
+                                        } else {
+                                            if (sortAscending) {
+                                              rows.sort(function(a, b) { return b[k] - a[k]; });
+                                              sortAscending = false;
+                                              this.className = 'aes';
+                                            } else {
+                                              rows.sort(function(a, b) { return a[k] - b[k]; });
+                                              sortAscending = true;
+                                              this.className = 'des';
+                                            }
+                                        }
+                                    }   
+                                });
+            // Inserindo linhas
+            var rows = table.append('tbody').selectAll('tr')
+                        .data(data).enter()
+                        .append('tr');
+            			//.on('mouseover', function(d) { this.style.border = 'solid 1px #ADD8E6' })
+            			//.on('mouseout', function(d) { this.style.border = '0px' });
+            rows.selectAll('td')
+            .data(function(row, i) {
+                return data_keys.map(function(c) {
+                    // compute cell values for this specific row
+                    var cell = {};
+                    d3.keys(c).forEach(function(k) {
+                        cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
+                    });
+                    return cell;
+                });
+            }).enter()
+            .append('td')
+            .html(ƒ('html'))
+            .style('background-color', function(d) {
+                var k = Object.keys(color_control);
+                if (k.includes(d['key'])) {
+                	var val = parseFloat(d['html']);
+	                if (!isNaN(val)) {
+	                    return color_control[d['key']](val);
+	                } else {
+	                    return 'white';
+	                }
+                }
+            })
+            .attr('class', ƒ('class'));
+			// Funcoes de processamento dos dados
+			// Retorna numero em porcentagem sem casas decimais
+			function percent() {
+            	return function(f) { return Math.round(100 * f) + '%'; };
+        	};
+        	// A partir do nome do pais, retorna a bandeira
+        	function input_img() {
+        		return function(country) { return "<img src='https://raw.githubusercontent.com/lucasnoveline/worldcup2018/master/flags32/" + country +".png' width='24' height='24'>"; }
+        	};
+		});
+	</script>
+</body>
+<html/>

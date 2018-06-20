@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copa do Mundo 2018: Probabilidades de vencer</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src='jetpack-starter-kit.js'></script>
+    <style type="text/css">
+    body { font-family: 'Helvetica Neue', Helvetica; font-weight: 300;}
+    table {border-collapse: collapse; margin: auto;}
+    tr {line-height: 15px;} /*Change row height*/
+    th { text-align: left; }
+    td, th { padding: 2px; font-size: 12px;}
+    th.center, td.center { text-align: center; }
+    th.num, td.num { text-align: center; }
+    th {cursor: s-resize; }
+    tr:hover {background-color: #f5f5f5;}
+    th {
+    border-bottom: 3px solid black;
+    border-collapse: collapse;
+}
+    td {
+    border-bottom: 1px solid #ddd;
+    border-collapse: collapse;
+}       
+    th {
+    background-color: #ffffff;      
+    padding-top: 6px;
+    padding-bottom: 6px;
+}   
+    table th:nth-child(1){
+       width: 30px;
+     }
+    table th:nth-child(2){
+       width: 50px;
+     }
+    table td:nth-child(2){
+       text-align: left;
+       padding-left: 6px;
+     }
+    table th:nth-child(3){
+       width: 80px;
+     }
+    table th:nth-child(4){
+       width: 80px;
+     }
+    table th:nth-child(5){
+       width: 80px;
+     }
+    table th:nth-child(6){
+       width: 80px;
+     }
+    table th:nth-child(7){
+       width: 80px;
+     }
+    table th:nth-child(8){
+       width: 80px;
+     }
+        
+    th.des:after {
+      content: "\21E9";
+    }
+    
+    th.aes:after {
+      content: "\21E7";
+    }
+    </style>
+</head>
+<body>
+    <script>
+    // Carregando nome do arquivo atraves do iframe
+    var file_path = window.location.search.substring(window.location.search.indexOf('file_path=') + 10);
+        
+    // Carregando os dados
+    d3.json(file_path, function(data) {
+            var f = d3.f;
+            var color = d3.scale.linear()
+                            .domain([0,100])
+                            .range(['white','#55AE3A']);
+
+            var sortAscending = true;
+            // column definitions OK!
+            var headers = [
+                //{ head: '', cl: 'center', html: ƒ('flag'), id: 'flag', cols: 1},
+                { head: 'Seleção', cl: 'center', html: ƒ('team'), id: 'team', cols: 2},
+                { head: 'Grupo', cl: 'center', html: ƒ('group'), id: 'group', cols: 1},
+                { head: 'Oitavas', cl: 'num', html: ƒ('eight', percent()), id: 'eight', cols: 1},
+                { head: 'Quartas', cl: 'num', html: ƒ('quarter', percent()), id: 'quarter', cols: 1},
+                { head: 'Semi', cl: 'num', html: ƒ('semi', percent()), id: 'semi', cols: 1},
+                { head: 'Final', cl: 'num', html: ƒ('final', percent()), id: 'final', cols: 1},
+                { head: 'Campeão', cl: 'num', html: ƒ('winner', percent()), id: 'winner', cols: 1}
+            ];
+            var keys = [
+                { head: 'flag', cl: 'center', html: f('flag', input_img())},
+                { head: 'team', cl: 'center', html: ƒ('team')},
+                { head: 'group', cl: 'center', html: ƒ('group')},
+                { head: 'eight', cl: 'num', html: ƒ('eight', percent())},
+                { head: 'quarter', cl: 'num', html: ƒ('quarter', percent())},
+                { head: 'semi', cl: 'num', html: ƒ('semi', percent())},
+                { head: 'final', cl: 'num', html: ƒ('final', percent())},
+                { head: 'winner', cl: 'num', html: ƒ('winner', percent())}
+            ];
+            // Criando tabela
+            var table = d3.select('body')
+                .append('table');
+           
+            // Criando cabecalho
+            var theaders = table.append('thead').append('tr')
+                .selectAll('th')
+                .data(headers).enter()
+                .append('th')
+                .attr('class', ƒ('cl'))
+                .attr('id', f('id'))
+                .attr('colspan', f('cols'))
+                .text(ƒ('head'))
+                .on('click', function (d) {
+                                    var k = this.id;
+                                    sortable = ['team','group','eight','quarter', 'semi', 'final','winner'];
+
+                                    if (sortable.includes(k)) {
+                                        theaders.attr('class', f('cl'));
+                                        if (['team', 'group'].includes(k)) {
+                                            if (sortAscending) {
+                                              rows.sort(function(a, b) { return b[k] < a[k]? 1 : -1; });
+                                              sortAscending = false;
+                                              this.className = 'aes';
+                                            } else {
+                                              rows.sort(function(a, b) { return b[k] > a[k]? 1 : -1; });
+                                              sortAscending = true;
+                                              this.className = 'des';
+                                            }
+                                        } else {
+                                            if (sortAscending) {
+                                              rows.sort(function(a, b) { return b[k] - a[k]; });
+                                              sortAscending = false;
+                                              this.className = 'aes';
+                                            } else {
+                                              rows.sort(function(a, b) { return a[k] - b[k]; });
+                                              sortAscending = true;
+                                              this.className = 'des';
+                                            }
+                                        }
+                                    }   
+                                });      
+            
+            var rows = table.append('tbody').selectAll('tr')
+                        .data(data).enter()
+                        .append('tr');
+
+            rows.selectAll('td')
+            .data(function(row, i) {
+                return keys.map(function(c) {
+                    // compute cell values for this specific row
+                    var cell = {};
+                    d3.keys(c).forEach(function(k) {
+                        cell[k] = typeof c[k] == 'function' ? c[k](row,i) : c[k];
+                    });
+                    return cell;
+                });
+            }).enter()
+            .append('td')
+            .html(ƒ('html'))
+            .style('background-color', function(d) {
+                var val = parseFloat(d['html']);
+                if (!isNaN(val)) {
+                    return color(val);
+                } else {
+                    return 'white';
+                }
+            })
+            .attr('class', ƒ('cl'));
+            
+        // Cover percentage
+        function percent() {
+            return function(f) { return 100*f>1? Math.round(100 * f) + '%' : '<1%'; };
+        };
+        // A partir do nome do pais, retorna a bandeira
+        function input_img() {
+          return function(country) { return "<img src='https://raw.githubusercontent.com/lucasnoveline/worldcup2018/master/flags32/" + country +".png' width='24' height='24'>"; }
+        };
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,6 @@
+[
+	{"Flag": "iran", "Team": "Irã", "Points": 3, "First": 0.1315, "Second": 0.2234, "Third": 0.595, "Fourth": 0.0501},
+	{"Flag": "spain", "Team": "Espanha", "Points": 1, "First": 0.45, "Second": 0.3732, "Third": 0.1454, "Fourth": 0.0314},
+	{"Flag": "portugal", "Team": "Portugal", "Points": 1, "First": 0.4104, "Second": 0.3834, "Third": 0.1648, "Fourth": 0.0414},
+	{"Flag": "morocco", "Team": "Marrocos", "Points": 0, "First": 0.0081, "Second": 0.02, "Third": 0.0948, "Fourth": 0.8771}
+]
