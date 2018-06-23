@@ -96,10 +96,66 @@ a:hover {
     margin: auto;
     align: middle;
 }
+
+.slidecontainer {
+    width: 100%;
+    background: white;
+}
+
+.sticky {
+  position: fixed;
+  top:0;
+  width: 50%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #07508C;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #07508C;
+    cursor: pointer;
+}
 </style>
 
 </head>
 <body>
+
+  <div class='slidecontainer'>
+    <p align='center'><span id='data-switch'></span></p>
+    <input type='range' min="1" max="6" value="1" class='slider' id='slider-switch'>
+  </div>
+
+  <div class="a">&nbsp;</div>
+
+  <div class='switch' style="text-align: center;">
+
+  </div>
 
   <div id="container">
       <div class="inner-container">
@@ -127,7 +183,24 @@ a:hover {
   </div>
 
   <script type="text/javascript">
-    var data = window.location.search.substring(window.location.search.indexOf('data=') + 5);
+    // Coletando valor do slider
+    var slider = document.getElementById("slider-switch");
+    var output = document.getElementById("data-switch");
+    var val = slider.value;
+
+    // Convertendo em data
+    if (val < 17) {
+      var dia = Number(val) + 14;
+      var data = '06.' + dia;
+      var show = dia + ' de Junho';
+    }
+    else {
+      var dia = Number(val) - 16;
+      var data = '07.' + dia;
+      var show = dia + ' de Julho';
+    }
+    output.innerHTML = show;
+    console.log(data);
     var toggle = document.getElementById('container');
     var toggleContainer = document.getElementById('toggle-container');
     var toggleNumber;
@@ -145,6 +218,28 @@ a:hover {
             f.innerHTML = f.innerHTML = "<iframe class='table3' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";;
         }
     });
+    slider.oninput = function() {
+      var val = this.value;
+      if (val < 17) {
+        var dia = Number(val) + 14;
+        var data = '06.' + dia;
+        var show = dia + ' de Junho';
+      }
+      else {
+        var dia = Number(val) - 16;
+        var data = '07.' + dia;
+        var show = dia + ' de Julho';
+      }
+      output.innerHTML = show;
+      var toggle = document.getElementById('container');
+      var toggleContainer = document.getElementById('toggle-container');
+      var f = document.getElementById("frame");
+      if (toggleNumber) {
+          f.innerHTML = "<iframe class='table2' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Tabela/?file_path=data/" + data + ".json' align='middle'></iframe>";
+      } else {
+          f.innerHTML = f.innerHTML = "<iframe class='table3' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";;
+      }
+    };
   </script>
 </body>
 </html>
