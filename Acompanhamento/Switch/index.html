@@ -205,17 +205,17 @@ a:hover {
     var toggleContainer = document.getElementById('toggle-container');
     var toggleNumber;
     var f = document.getElementById("frame");
-    f.innerHTML = "<iframe class='table3' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";
+    f.innerHTML = "<iframe class='table3' src='https://fnagano.github.io/worldcup2018/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";
     toggle.addEventListener('click', function() {
         toggleNumber = !toggleNumber;
         if (toggleNumber) {
             toggleContainer.style.clipPath = 'inset(0 0 0 50%)';
             toggleContainer.style.backgroundColor = '#303030';
-            f.innerHTML = "<iframe class='table2' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Tabela/?file_path=data/" + data + ".json' align='middle'></iframe>";
+            f.innerHTML = "<iframe class='table2' src='https://fnagano.github.io/worldcup2018/Acompanhamento/Switch/Tabela/?file_path=data/" + data + ".json' align='middle'></iframe>";
         } else {
             toggleContainer.style.clipPath = 'inset(0 50% 0 0)';
             toggleContainer.style.backgroundColor = '#303030';
-            f.innerHTML = f.innerHTML = "<iframe class='table3' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";;
+            f.innerHTML = f.innerHTML = "<iframe class='table3' src='https://fnagano.github.io/worldcup2018/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";;
         }
     });
     slider.oninput = function() {
@@ -235,9 +235,9 @@ a:hover {
       var toggleContainer = document.getElementById('toggle-container');
       var f = document.getElementById("frame");
       if (toggleNumber) {
-          f.innerHTML = "<iframe class='table2' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Tabela/?file_path=data/" + data + ".json' align='middle'></iframe>";
+          f.innerHTML = "<iframe class='table2' src='https://fnagano.github.io/worldcup2018/Acompanhamento/Switch/Tabela/?file_path=data/" + data + ".json' align='middle'></iframe>";
       } else {
-          f.innerHTML = f.innerHTML = "<iframe class='table3' src='https://lucasnoveline.github.io/worldcup2018_posts/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";;
+          f.innerHTML = f.innerHTML = "<iframe class='table3' src='https://fnagano.github.io/worldcup2018/Acompanhamento/Switch/Sunburst/?file_path=data/" + data + ".csv' align='middle' scrolling='no'></iframe>";;
       }
     };
   </script>
